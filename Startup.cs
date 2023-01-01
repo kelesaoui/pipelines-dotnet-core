@@ -59,7 +59,7 @@ namespace pipelines_dotnet_core
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
+            });  
         }
     }
 }
