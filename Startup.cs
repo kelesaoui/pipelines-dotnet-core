@@ -5,10 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-
-
-
-
 namespace pipelines_dotnet_core
 {
     public class Startup
@@ -20,7 +16,7 @@ namespace pipelines_dotnet_core
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // This method gets called by the runtime. Use this methlllod to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             _ = services.Configure<CookiePolicyOptions>(options =>
