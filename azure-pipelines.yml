@@ -13,4 +13,5 @@ pool:
 steps:
 - checkout: none
 - bash: echo hello
-- bash: echo "##vso[task.setVariable variable=v1]toto"
+- bash: echo "##vso[task.setvariable variable=v1]toto"
+- bach: echo "la valeur de ma variable est= $(v1)"
