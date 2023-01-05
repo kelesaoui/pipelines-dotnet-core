@@ -15,6 +15,6 @@ jobs :
   pool:
       vmImage:${{paramters.image}}
   steps:
-  - script: echo buulding $(Build.BuildNumber) with $(paramters.image)
+  - script: echo buulding $(Build.BuildNumber) with $(parameters.image)
 
 
