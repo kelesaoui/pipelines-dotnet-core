@@ -12,9 +12,8 @@ trigger: none
 jobs :
 - job : build
   displayName: my first build job
-  pool:
-    vmImage: ${{parameters.image}}
+  pool: ${{parameters.image}}
   steps:
-  - script: echo buulding $(Build.BuildNumber) with $(parameters.image)
+  - script: echo buulding $(Build.BuildNumber) with ${{parameters.image}}
 
 
