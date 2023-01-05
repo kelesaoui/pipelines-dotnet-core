@@ -1,17 +1,20 @@
-# ASP.NET Core
-# Build and test ASP.NET Core projects targeting .NET Core.
-# Add steps that run tests, create a NuGet package, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+parameters:
+  - name: image
+    displayName: pool Image
+    type: string
+    default: ubuntu-latest
+    values:
+      - windows-latest
+      - ubuntu-latest
+      - macOs-latest
+trigger: none
 
-trigger:
-- master
+jobs :
+- job : build
+  displayName: my first build job
+  pool:
+      vmImage:${{paramters.image}}
+  steps:
+  - script: echo buulding $(Build.BuildNumber) with $(paramters.image)
 
-pool:
-  vmImage: ubuntu-latest
 
-
-steps:
-- checkout: none
-- bash: echo hello
-- bash: echo "##vso[task.setvariable variable=v1]toto"
-- bash: echo "la valeur de ma variable est= $(v1)"
